@@ -1,0 +1,38 @@
+{
+  "name": "ts-jsx-project",
+  "version": "1.0.0",
+  "description": "A pipeline for building JSX-based applications in typescript",
+  "private": true,
+  "scripts": {
+    "prepare-env": "ts-node ./scripts/prepare-env",
+    "start": "concurrently \"tsc -w -p ./config/dev.tsconfig.json\" \"http-server build -p 8080 -o\"",
+    "build": "copyfiles -f \"node_modules/normalize.css/normalize.css\" dist && webpack --config ./config/webpack.config.js",
+    "dist": "http-server dist -p 8081 -o",
+    "test": "karma start config/karma.conf.js --browsers ChromeHeadless --single-run",
+    "test-debug": "karma start config/karma.conf.js",
+    "coverage": "http-server -p 8082 coverage -o"
+  },
+  "author": "Andrew Lowndes",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.8",
+    "concurrently": "^3.5.1",
+    "copyfiles": "^2.0.0",
+    "http-server": "^0.11.1",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-typescript": "^3.0.12",
+    "systemjs": "^0.21.4",
+    "ts-loader": "^4.4.1",
+    "ts-node": "^6.1.1",
+    "typescript": "^2.9.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^2.1.5"
+  },
+  "dependencies": {
+    "es6-shim": "^0.35.3",
+    "normalize.css": "^8.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "declaration": false,
+    "module": "commonjs"
+  },
+  "include": [
+    "../src/**/*"
+  ],
+  "exclude": [
+    "../src/**/*.spec.ts"
+  ]
+}
