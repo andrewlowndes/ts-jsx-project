@@ -1,5 +1,5 @@
 # Typescript JSX Environment
-A JSX.js web application development environment configured to use Typescript and Karma, Jasmine for testing.
+A JSX web application development environment configured to use Typescript and Karma, Jasmine for testing.
 
 ## Features
 - No UI libraries or frameworks, pure DOM and JSX (very small filesize)
@@ -40,7 +40,7 @@ Call `npm run coverage` to view the html docs of the coverage report (a coverage
 The entry file for compiling and running the Typescript is 'src/index.tsx'. Add your own code by creating a file with the '.ts' or the '.tsx' (JSX) extension in the src directory (or subdirectory).
 
 ### Writing tests
-Add your tests to the src directory (or subdirectory) with the file extension '.spec.ts'.
+Add your tests to the src directory (or subdirectory) with the file extension '.spec.ts' or '.spec.tsx'.
 
 ### Add 3rd party libraries
 Install the library via `npm i {libraryName}`.
@@ -70,6 +70,9 @@ System.config({
 ```
 
 ## QandA
+
+### The render function is not being called when my state changes...
+This is not React, there is no dynamic change detection or dom rerendering. The only similarity the component interface has to React is a render method and props/state properties.
 
 ### Where do all my images go?
 There is an `asset` folder at the top level, which is symlinked over to the build and dist environments so you can put all of your static media in one place during development. Then once you are ready you could push them up to a CDN.
