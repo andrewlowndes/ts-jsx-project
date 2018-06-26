@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta base="/" />
+    <meta charset="UTF-8" />
+    
+    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css" />
+    
+    <style>
+      html {
+        height: 100%;
+      }
+      
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+      
+      #root {
+        height: 100%;
+        overflow: auto;
+      }
+    </style>
+    
+    <script>
+      (function() {
+        function addScript(src) {
+          var script = document.createElement('script');
+          script.src = src;
+          document.body.appendChild(script);
+        }
+        
+        window.onload = function() {
+          addScript('vendor.js');
+          addScript('app.js');
+        };
+      })();
+    </script>
+  </head>
+  <body><div id="root"></div></body>
+</html>

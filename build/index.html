@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta base="/" />
+    <meta charset="UTF-8" />
+    
+    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css" />
+    
+    <style>
+      html {
+        height: 100%;
+      }
+      
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+      
+      #root {
+        height: 100%;
+        overflow: auto;
+      }
+    </style>
+    
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="config/system.conf.js"></script>
+    <script>
+      SystemJS.import('/js/index.js');
+    </script>
+  </head>
+  <body><div id="root"></div></body>
+</html>

@@ -10,7 +10,8 @@ const root = path.resolve(__dirname, '../'),
   [build + 'src', '../src'],
   [build + 'config', '../config'],
   [build + 'assets', '../assets'],
-  [dist + 'assets', '../assets']
+  [dist + 'assets', '../assets'],
+  [dist + 'node_modules', '../node_modules']
 ].forEach(([destination, relativeTarget]) => {
   try {
     fs.symlinkSync(relativeTarget, destination, 'dir');
